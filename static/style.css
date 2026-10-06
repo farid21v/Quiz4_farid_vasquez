@@ -1,0 +1,75 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #1f2937;
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 520px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+h1 { margin: 0 0 6px; font-size: 1.6rem; text-align: center; }
+.subtitulo { margin: 0 0 24px; text-align: center; color: #6b7280; }
+
+.fila { display: flex; gap: 16px; }
+.fila .campo { flex: 1; }
+.campo { margin-bottom: 16px; }
+
+label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.9rem; }
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    transition: border-color 0.2s;
+}
+input:focus { outline: none; border-color: #4f46e5; }
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: #4f46e5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover { background: #4338ca; }
+
+.mensaje { margin-top: 20px; padding: 12px 14px; border-radius: 8px; }
+.error { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+
+.resultado { margin-top: 24px; }
+.resultado h2 { font-size: 1.1rem; margin: 0 0 12px; }
+.numeros { display: flex; flex-wrap: wrap; gap: 8px; }
+.numero {
+    padding: 8px 14px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 700;
+    border-radius: 999px;
+}
+.ayuda { margin: 14px 0 0; font-size: 0.85rem; color: #6b7280; }
+
+@media (max-width: 480px) {
+    .fila { flex-direction: column; gap: 0; }
+    .tarjeta { padding: 24px; }
+}
